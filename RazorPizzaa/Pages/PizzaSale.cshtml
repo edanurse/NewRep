@@ -1,7 +1,23 @@
 ﻿@page
 @model RazorPizzaa.Pages.PizzaSaleModel
 @{
+    ViewData["Title"] = "Pizza Sale";
 }
 <h1>Pizza Sales</h1>
-<a asp-page="/Forms*CustomPizza">Custom Pizza</a>
 <a asp-page="/Checkout/Checkout">Check Out</a>
+<div class="container">
+    <div class="row">
+        
+            <div class="col-3"></div>
+            <div class="col-3">
+                <img class="w-100 bg-danger" src="~/images/Pizzas/Create.png" alt="Creat Your own Pizza"/>
+            </div>
+            <div class="col-3 bg-danger text-white my text-center py-0!important"> 
+            <h1>Create Your own Pizza!</h1>
+            
+            <a class="btn btn-dark mx-auto" asp-page="/Forms*CustomPizza">Try!</a>
+            </div>
+            <div class="col-3"></div>
+      
+    </div>
+</div>
