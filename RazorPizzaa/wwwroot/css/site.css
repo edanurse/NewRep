@@ -16,8 +16,7 @@ html {
 body {
   margin-bottom: 60px;
 }
-.mainImg {
-    border-radius:20px;
-    filter:drop-shadow(0 0 10px rgba(0,0,0,0.5));
-    margin:20px 0 20px 0;
+.row {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
