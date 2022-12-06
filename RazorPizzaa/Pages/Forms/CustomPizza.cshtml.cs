@@ -17,9 +17,9 @@ namespace RazorPizzaa.Pages.Forms
         {
             PizzaPrice = Pizza.BasePrice;
          
-            PizzaPrice = Pizza.Sauce ? 5 : 0;
-            PizzaPrice = Pizza.Cheese ? 5 : 0;
-            PizzaPrice = Pizza.Peporoni ? 5 : 0;
+            PizzaPrice += Pizza.Sauce ? 5 : 0;
+            PizzaPrice += Pizza.Cheese ? 5 : 0;
+            PizzaPrice += Pizza.Peporoni ? 5 : 0;
             return RedirectToPage("/Checkout/Checkout", new { Pizza.Name,PizzaPrice });
         }
     }
