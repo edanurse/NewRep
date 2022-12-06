@@ -18,15 +18,17 @@
             <a class="btn btn-dark mx-auto" asp-page="/Forms/CustomPizza">Try!</a>
             </div>
             <div class="col-3"></div>
-    </div>
+   
+
     @foreach (var pizza in Model.FakePizzaDb)
     {
         var imgPath = "~/images/Pizzas/"+pizza.ImageTitle+".png";
-         <div class="col-4">
-            <img  class="w-100" src="@imgPath" append-version=true/>
-            <a class="btn btn-primary" asp-page="/Checkout/Checkout" asp-route-Name="@pizza.Name" asp-route-ImageTitle="@pizza.ImageTitle"asp-route-PizzaPrice="@pizza.FinalPrice">Get This Pizza</a>
-        </div>
+                <div class="col-3 mb-5">
+                    <img   src="@imgPath" class="w-100 mt-3" asp-append-version=true/>
+                    <a class="btn btn-primary" asp-page="/Checkout/Checkout" asp-route-Name="@pizza.Name" asp-route-ImageTitle="@pizza.ImageTitle"asp-route-PizzaPrice="@pizza.FinalPrice">Get This Pizza</a>
+                </div>
     }
-       
+
+       </div> 
     </div>
 
