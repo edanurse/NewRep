@@ -12,7 +12,7 @@
             <img class="w-100 mb-4" src="@imgPath" alt"" asp-append-version="true"/>
             <p class="">Your order for @Model.Name</p>
             <p>total price: @Model.PizzaPrice</p>
-            <a class="btn btn-danger"asp-page="Thankyou">Confirm Order</a>
+            <a class="btn btn-danger"asp-page="Thankyou" asp-route-Name=@Model.Name asp-route-PizzaPrice=@Model.PizzaPrice>Confirm Order</a>
         </div>
     </div>
 </div>
