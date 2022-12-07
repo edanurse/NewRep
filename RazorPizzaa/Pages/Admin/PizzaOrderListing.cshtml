@@ -1,0 +1,28 @@
+﻿@page
+@model RazorPizzaa.Pages.Admin.PizzaOrderListingModel
+@{
+}
+
+<div class="container">
+   
+    <h1>Amin Panel</h1>
+     <div class="w-50">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Pizza Name</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var po in Model.PizzaOrders)
+            {
+            <tr>
+                <td>@po.PizzaName</td>
+                <td>@po.Price</td>
+            </tr>     
+            }
+        </tbody>
+    </table>
+</div>
+</div>
